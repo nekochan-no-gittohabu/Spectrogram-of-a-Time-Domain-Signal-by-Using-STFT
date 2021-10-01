@@ -1,9 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%% OUR CODE STARTS AT LINE 392 %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% OUR CODE STARTS AT LINE 390 %%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% AYÇA AYDOĞAN 2093375
-% YİĞİT DİNCER 2188100
 
 
 function varargout = myapp(varargin)
@@ -435,8 +432,7 @@ elseif get(handles.Tukey,'Value') == get(handles.Tukey,'Max')
         win=tukeywin(N).'; 
     
 elseif get(handles.Cosine,'Value') == get(handles.Cosine,'Max')
-        % As there is no cosine filter in MATLAB, 
-        % we created our own filter
+        % Creating a cosine filter as MATLAB doesn't have one
         for n = 1:N
             win(n) = cos(2*pi*500*n);  
         end
